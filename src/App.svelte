@@ -1,6 +1,8 @@
 <script lang="ts">
     /* import Background from "./Background.svelte"; */
-    import Header from "./Header.svelte";
+    import Career from "./Career.svelte";
+import Education from "./Education.svelte";
+import Header from "./Header.svelte";
 </script>
 
 <div id=background>
@@ -15,15 +17,13 @@
     </div>
 
     <div class=full-screen-div>
-        <h1 class=section>General</h1>
-    </div>
-
-    <div class=full-screen-div>
         <h1 class=section>Education</h1>
+        <Education />
     </div>
 
     <div class=full-screen-div>
         <h1 class=section>Career</h1>
+        <Career />
     </div>
 
     <div class=full-screen-div>

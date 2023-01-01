@@ -1,15 +1,18 @@
 <script lang="ts">
+    let y = 0;
 </script>
 
+<svelte:window bind:scrollY={y} />
+
 <div id=container-container>
-    <div class=container>
+    <div class=container style="transform: translateY({y - 2 * y}px)">
         <span id=s>S</span>
         <span id=i>i</span>
         <span id=m>m</span>
         <span id=o>o</span>
         <span id=n>n</span>
     </div>
-    <div class=container>
+    <div class=container style="transform: translateY({y - 1.5 * y}px)">
         <span id=d>D</span>
         <span id=dot>.</span>
         <span id=space>&nbsp</span>
@@ -41,8 +44,6 @@
         justify-content: center;
 
         font-family: 'JetBrains Mono', monospace;
-
-        text-shadow: 10px 20px 30px #afafaf;
     }
 
     #s, #i, #m, #o, #n {
