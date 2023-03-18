@@ -1,81 +1,60 @@
 <script lang="ts">
-    /* import Background from "./Background.svelte"; */
-    import Career from "./Career.svelte";
-import Education from "./Education.svelte";
-import Header from "./Header.svelte";
+    import ProgrammingLanguage from "./ProgrammingLanguage.svelte";
+    import Title from "./Title.svelte";
 </script>
 
-<div id=background>
-    <!--
-    <Background />
-    -->
+<div class=layout>
+    <div style="grid-column: 1/4">
+        <Title />
+    </div>
+    <div style="grid-column: 1/3;">
+        <ProgrammingLanguage />
+    </div>
+    <div style="border: 2px solid black;" />
+    <div style="border: 2px solid black;" />
+    <div style="border: 2px solid black;" />
+    <div style="border: 2px solid black;" />
+    <div style="border: 2px solid black;" />
+    <div style="border: 2px solid black;" />
+    <div style="border: 2px solid black;" />
+    <div style="border: 2px solid black;" />
+    <div style="border: 2px solid black;" />
+    <div style="border: 2px solid black;" />
 </div>
 
-<div class=scroll-container>
-    <div class=full-screen-div>
-        <Header/>
-    </div>
-
-    <div class=full-screen-div>
-        <h1 class=section>Education</h1>
-        <Education />
-    </div>
-
-    <div class=full-screen-div>
-        <h1 class=section>Career</h1>
-        <Career />
-    </div>
-
-    <div class=full-screen-div>
-        <h1 class=section>Skills</h1>
-    </div>
-
-    <div class=full-screen-div>
-        <h1 class=section>Projects</h1>
-    </div>
-
-    <div class=full-screen-div>
-        <h1 class=section>Setup Preference</h1>
-    </div>
-
-    <div class=full-screen-div>
-        <h1 class=section>Hobbies</h1>
-    </div>
-</div>
-
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Old+Standard+TT">
 <style>
-    @import url('https://fonts.googleapis.com/css?family=JetBrains+Mono');
-
     :global(body) {
-        margin: 0;
+        font-family: "Old Standard TT";
     }
 
-    .section {
-        font-family: 'JetBrains Mono', monospace;
-        text-align: center;
-        margin: 0;
+    .layout {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
     }
 
-    .scroll-container {
-        position: relative;
-        scroll-snap-type: y mandatory;
-        height: 100vh;
-        overflow-y: scroll;
+    @media screen and (min-width: 480px) {
+        .layout {
+            display: grid;
+            grid-template-columns: 3fr 4fr 3fr;
+            grid-auto-rows: minmax(10vh, auto);
+        }
     }
 
-    .full-screen-div {
-        width: 100vw;
-        height: 100vh;
-        margin: 0;
-
-        scroll-snap-align: start;
-        /* only supported in Chrome */
-        scroll-snap-stop: always;
+    @media screen and (min-width: 1080px) {
+        .layout {
+            margin-left: 10%;
+            margin-right: 10%;
+            box-shadow: 10px 10px 20px 5px #60606040;
+            padding: 30px;
+        }
     }
 
-    #background {
-        position: absolute;
-        width: 100vw;
-        height: 100vh;
+    @media screen and (min-width: 2000px) {
+        .layout {
+            margin-left: 20%;
+            margin-right: 20%;
+        }
     }
 </style>
