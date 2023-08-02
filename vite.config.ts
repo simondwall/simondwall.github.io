@@ -9,8 +9,8 @@ export default defineConfig({
         rollupOptions: {
             input: {
                 main: resolve(__dirname, 'index.html'),
-                "issue/01": resolve(__dirname, 'issue/01/index.html'),
-                "issue/02": resolve(__dirname, 'issue/02/index.html'),
+                // "issue/01": resolve(__dirname, 'issue/01/index.html'),
+                // "issue/02": resolve(__dirname, 'issue/02/index.html'),
             },
         },
     },
